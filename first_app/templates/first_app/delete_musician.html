@@ -1,0 +1,11 @@
+{%extends "first_app/base.html"%}
+{%block content%}
+<h3>Delete {{musician.first_name}} {{muscician.last_name}}?</h3>
+<form  method="post">
+   {%csrf_token%}
+   <input type="submit" name="submit" value="Delete" 
+   class="btn btn-danger btn-sm" ><a href="{%url 'first_app:musician_detail' pk=musician.pk %}"class="btn btn-info btn-sm"> Cancel</a>
+
+</form>
+{%endblock%}
+

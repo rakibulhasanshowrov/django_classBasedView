@@ -1,0 +1,8 @@
+{%extends 'first_app/base.html'%}
+{%block content%}
+<ul>
+{%for musician in musician_list%}
+<li><a href="{%url 'first_app:musician_detail' pk=musician.pk%}">{{ musician.first_name }} {{ musician.last_name }}</a></li> 
+{%endfor%}
+</ul>
+{%endblock%}
